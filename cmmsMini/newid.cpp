@@ -52,7 +52,7 @@ void NewID::on_pushButton_clicked()
         return;
     }
 
-    if (!ufile.open(QIODevice::WriteOnly | QIODevice::Text))
+    else if (!ufile.open(QIODevice::WriteOnly | QIODevice::Text))
     {
 
         QMessageBox::warning(this, "Error", "Failed to open the file for writing: " + ufile.errorString());
@@ -81,7 +81,7 @@ void NewID::on_pushButton_clicked()
         QMessageBox::information(this,"Error","Please enter a Password");
     }
 
-    if (!ufile.open(QIODevice::Append | QIODevice::Text)) {
+    else if (!ufile.open(QIODevice::Append | QIODevice::Text)) {
         QMessageBox::warning(this, "Error", "Failed to open the file for writing: " + ufile.errorString());
     }
 
@@ -96,4 +96,3 @@ void NewID::on_pushButton_clicked()
 
 
 }
-
